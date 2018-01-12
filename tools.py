@@ -42,10 +42,9 @@ class config_browser():
         chrome_options.add_argument('--no-sandbox')
         chrome_options.add_argument("--window-size=1920,1080")
         #driver = webdriver.Chrome(executable_path='/Users/user/Desktop/chromedriver', chrome_options=chrome_options)
-        driver = webdriver.Chrome(executable_path='/root/.wdm/chromedriver/2.34/chromedriver', chrome_options=chrome_options)    #### <----- Path to chomedriver on server
+        driver = webdriver.Chrome(executable_path='/root/.wdm/chromedriver/2.35/chromedriver', chrome_options=chrome_options)    #### <----- Path to chomedriver on server
         browser.set_driver(driver)
-        #driver.close()
-        #config.browser_name = BrowserName.CHROME
+
 
     def phantomJS(self):
         config.browser_name = BrowserName.PHANTOMJS
