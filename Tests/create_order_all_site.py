@@ -49,11 +49,11 @@ class Test_Create_order_steps:
 
     def setup(m):
         config_browser().chrome_headless()
+        browser.driver().delete_all_cookies()
         print '\n ****************** START TEST CASE ************** \n'
 
     def teardown(m):
         print '\n ****************** END TEST KEYS ***************** \n'
-        browser.driver().delete_all_cookies()
         browser.close()
 
 
@@ -847,4 +847,3 @@ class Test_Create_order_steps:
         order_steps.click_proceed_to_secure_payment()
         modals.modal_upgrade_order()
         order_steps.checking_price(price)
-        browser.close()
