@@ -103,13 +103,13 @@ def check_stata():
     dt = str(dt)
     print 'Current date is ' + dt
     unik_field = s(by.xpath('//div[@class="table-stats-resp-con stats-block"]/div[2]/table[1]/tbody/tr/td[contains(text(), "{0}")]/../td[2]'.format(dt))).text
-    if unik_field == '2':
+    if unik_field == '1':
         print 'Count unik ' +  unik_field + " in " + dt
     else:
         print 'Error unik test ! Unik = ' + unik_field
         s('. Error for unik').click()
     bid_field = s(by.xpath('//div[@class="table-stats-resp-con stats-block"]/div[2]/table[1]/tbody/tr/td[contains(text(), "{0}")]/../td[3]'.format(dt))).text
-    if bid_field == '0':
+    if bid_field == '1':
         print 'Count bid ' +  bid_field + " in " + dt
     else:
         print 'Error bid test ! Bid = ' + bid_field

@@ -59,7 +59,7 @@ def sign_in(email, pwd):
     s(by.xpath('//li[@tab-target="_client_login"]/a')).click()
     s('[name="email_reg"]').set_value(email)
     s('#password_reg').set_value(pwd)
-    s('#butt_next_2').click().press_enter()
+    s('#butt_next_2').click()
 
 
 @allure.step('Функционал "Forgot your password?"')
