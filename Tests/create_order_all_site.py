@@ -54,7 +54,7 @@ class Test_Create_order_steps:
 
     def teardown(m):
         print '\n ****************** END TEST KEYS ***************** \n'
-        browser.close()
+        browser.quit()
 
 
     #________________________________________________PH ________________________________

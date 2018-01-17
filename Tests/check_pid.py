@@ -63,7 +63,8 @@ class Test_Check_pid:
     def teardown(m):
         print '\n ****************** END TEST KEYS ***************** \n'
         browser.driver().delete_all_cookies()
-        browser.close()
+        browser.quit()
+
 
 # Start test
     @allure.story('Создание заказа и проверка трека статы на PH')

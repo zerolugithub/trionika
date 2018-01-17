@@ -42,7 +42,7 @@ class Test_Create_Inquiry_All_site:
     def teardown(m):
         print '\n ****************** END TEST KEYS ***************** \n'
         browser.driver().delete_all_cookies()
-        browser.close()
+        browser.quit()
 
 
 # _________________________________________________PH __________________________________________
