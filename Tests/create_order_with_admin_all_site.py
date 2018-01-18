@@ -318,7 +318,6 @@ class Test_Create_order_steps:
         price = order_steps.submit_proceed_to_secure_payment()
         modals.modal_upgrade_order()
         order_steps.checking_price(price)
-        browser.driver().close()
 
 
     @allure.feature('Создание заказа через админку клиента FH')
@@ -443,7 +442,6 @@ class Test_Create_order_steps:
         price = order_steps.submit_proceed_to_secure_payment()
         modals.modal_upgrade_order()
         order_steps.checking_price(price)
-        browser.driver().close()
 
 
     @allure.feature('Создание заказа через админку клиента ET')
