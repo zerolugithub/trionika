@@ -439,5 +439,3 @@ class Test_Create_order_steps:
         price = ph.change_inquiry_to_order('new_client')
         order_steps.click_proceed_to_secure_payment_inquiry()
         order_steps.checking_price(price)
-        browser.close()
-        browser.quit_driver()

@@ -49,7 +49,7 @@ config.reports_folder = os.path.join(os.getcwd(), "screenshots")
 
 
 class Test_Create_order_steps:
-    driver = browser.driver()
+    #driver = browser.driver()
 
     def setup(m):
         config_browser().chrome_headless()
@@ -58,7 +58,7 @@ class Test_Create_order_steps:
     def teardown(m):
         print '\n ****************** END TEST KEYS ***************** \n'
         browser.driver().delete_all_cookies()
-        chrome_clean_up()
+        browser.driver().close()
 
 
 
@@ -344,7 +344,7 @@ class Test_Create_order_steps:
         price = order_steps.submit_proceed_to_secure_payment()
         modals.modal_upgrade_order()
         order_steps.checking_price(price)
-        browser.driver().close()
+
 
     @allure.feature('Создание заказа через админку клиента LME')
     @allure.story('Создание заказа - зарегестрированый пользователь')

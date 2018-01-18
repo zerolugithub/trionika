@@ -54,7 +54,7 @@ from selenium.webdriver.chrome.options import Options
 
 
 class Test_Check_pid:
-    driver = browser.driver()
+    #driver = browser.driver()
 
     def setup(m):
         config_browser().chrome_headless()
@@ -63,6 +63,7 @@ class Test_Check_pid:
     def teardown(m):
         print '\n ****************** END TEST KEYS ***************** \n'
         browser.driver().delete_all_cookies()
+        browser.driver().close()
 
 
 # Start test
@@ -213,4 +214,3 @@ class Test_Check_pid:
         main_edp.login_dw()
         main_edp.go_to_stata_tab()
         main_edp.check_stata()
-        browser.driver().close()
