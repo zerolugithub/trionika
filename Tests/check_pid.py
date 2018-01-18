@@ -54,7 +54,7 @@ from selenium.webdriver.chrome.options import Options
 
 
 class Test_Check_pid:
-    #driver = browser.driver()
+    driver = browser.driver()
 
     def setup(m):
         config_browser().chrome_headless()

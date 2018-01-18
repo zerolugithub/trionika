@@ -45,7 +45,7 @@ config.reports_folder = os.path.join(os.getcwd(), "screenshots")
 
 
 class Test_Create_order_steps:
-    #driver = browser.driver()
+    driver = browser.driver()
 
     def setup(m):
         #browser.driver().quit()

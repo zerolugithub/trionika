@@ -33,7 +33,7 @@ config.reports_folder = os.path.join(os.getcwd(), "screenshots")
 
 
 class Test_Create_Inquiry_All_site:
-    #driver = browser.driver()
+    driver = browser.driver()
 
     def setup(m):
         config_browser().chrome_headless()
