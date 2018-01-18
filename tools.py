@@ -62,8 +62,8 @@ class config_browser():
         chrome_options.add_argument('--headless')
         chrome_options.add_argument('--no-sandbox')
         chrome_options.add_argument("--window-size=1920,1080")
-        driver = webdriver.Chrome(executable_path='/Users/user/Desktop/chromedriver', chrome_options=chrome_options)
-        #driver = webdriver.Chrome(executable_path='/var/lib/jenkins/.wdm/chromedriver/2.34/chromedriver', chrome_options=chrome_options)    #### <----- Path to chomedriver on server
+        #driver = webdriver.Chrome(executable_path='/Users/user/Desktop/chromedriver', chrome_options=chrome_options)
+        driver = webdriver.Chrome(executable_path='/var/lib/jenkins/.wdm/chromedriver/2.34/chromedriver', chrome_options=chrome_options)    #### <----- Path to chomedriver on server
         browser.set_driver(driver)
         driver = browser.driver()
 
