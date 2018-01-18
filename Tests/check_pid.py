@@ -63,8 +63,6 @@ class Test_Check_pid:
     def teardown(m):
         print '\n ****************** END TEST KEYS ***************** \n'
         browser.driver().delete_all_cookies()
-        browser.close()
-        browser.quit()
 
 
 # Start test
@@ -215,3 +213,4 @@ class Test_Check_pid:
         main_edp.login_dw()
         main_edp.go_to_stata_tab()
         main_edp.check_stata()
+        browser.driver().close()
