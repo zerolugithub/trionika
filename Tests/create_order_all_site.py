@@ -35,7 +35,7 @@ from Sites.UE import ue
 from Sites.WMP import wmp
 from Sites.ws import ws
 from data import mail, pwd, topic, paper_details, subject_list
-from tools import phantom_js_clean_up, config_browser
+from tools import phantom_js_clean_up, config_browser, chrome_clean_up
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 
@@ -54,6 +54,7 @@ class Test_Create_order_steps:
 
     def teardown(m):
         print '\n ****************** END TEST KEYS ***************** \n'
+        chrome_clean_up()
 
 
 

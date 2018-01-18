@@ -23,7 +23,7 @@ from Sites.LME import lme
 from Sites.PH import ph
 from data import mail, pwd, topic, paper_details, subject_list, additional_materials_list, preferred_writer_option_list, \
     Preferred_writer_ID
-from tools import phantom_js_clean_up, config_browser
+from tools import phantom_js_clean_up, config_browser, chrome_clean_up
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 
@@ -42,7 +42,7 @@ class Test_Create_Inquiry_All_site:
     def teardown(m):
         print '\n ****************** END TEST KEYS ***************** \n'
         browser.driver().delete_all_cookies()
-
+        chrome_clean_up()
 
 
 # _________________________________________________PH __________________________________________

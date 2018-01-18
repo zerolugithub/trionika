@@ -33,6 +33,19 @@ def phantom_js_clean_up():
             pid = int(line.split(None, 1)[0])
             os.kill(pid, signal.SIGKILL)
 
+def chrome_clean_up():
+    """Clean up Phantom JS.
+
+    Kills all phantomjs instances, disregard of their origin.
+    """
+    processes = subprocess.Popen(['ps', '-A'], stdout=subprocess.PIPE)
+    out, err = processes.communicate()
+
+    for line in out.splitlines():
+        if 'chrome' or "chromedriver" in line:
+            pid = int(line.split(None, 1)[0])
+            os.kill(pid, signal.SIGKILL)
+
 
 class config_browser():
 

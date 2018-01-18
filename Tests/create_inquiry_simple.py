@@ -42,6 +42,7 @@ class Test_Create_order_steps:
     def teardown(m):
         print '\n ****************** END TEST KEYS ***************** \n'
         browser.driver().delete_all_cookies()
+        chrome_clean_up()
 
 
     @allure.feature('Создание inquiry на PH')
