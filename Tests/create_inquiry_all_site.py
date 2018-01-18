@@ -33,16 +33,17 @@ config.reports_folder = os.path.join(os.getcwd(), "screenshots")
 
 
 class Test_Create_Inquiry_All_site:
-    driver = browser.driver()
+    #driver = browser.driver()
 
     def setup(m):
         config_browser().chrome_headless()
+        browser.driver().delete_all_cookies()
         print '\n ****************** START TEST CASE ************** \n'
 
     def teardown(m):
         print '\n ****************** END TEST KEYS ***************** \n'
-        browser.driver().delete_all_cookies()
-        chrome_clean_up()
+        browser.driver().close()
+
 
 
 # _________________________________________________PH __________________________________________

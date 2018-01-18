@@ -35,7 +35,7 @@ from Sites.UE import ue
 from Sites.WMP import wmp
 from Sites.ws import ws
 from data import mail, pwd, topic, paper_details, subject_list
-from tools import phantom_js_clean_up, config_browser, chrome_clean_up
+from tools import phantom_js_clean_up, config_browser
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 
@@ -45,16 +45,18 @@ config.reports_folder = os.path.join(os.getcwd(), "screenshots")
 
 
 class Test_Create_order_steps:
-    driver = browser.driver()
+    #driver = browser.driver()
 
     def setup(m):
+        #browser.driver().quit()
         config_browser().chrome_headless()
         browser.driver().delete_all_cookies()
         print '\n ****************** START TEST CASE ************** \n'
 
     def teardown(m):
         print '\n ****************** END TEST KEYS ***************** \n'
-        chrome_clean_up()
+        browser.driver().close()
+
 
 
 

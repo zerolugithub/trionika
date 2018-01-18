@@ -12,7 +12,7 @@ def scrollDown():
     browser.driver().execute_script(("window.scrollTo(0, document.body.scrollHeight);"))
 
 #tearDownClass for phantomjs driver - close process
-def tearDownClass(cls):
+def tearDownClassPhantomJS(cls):
     """Tear down class."""
     try:
         cls.driver.quit()
@@ -33,10 +33,18 @@ def phantom_js_clean_up():
             pid = int(line.split(None, 1)[0])
             os.kill(pid, signal.SIGKILL)
 
-def chrome_clean_up():
-    """Clean up Phantom JS.
+def tearDownClassChrome(cls):
+    """Tear down class."""
+    try:
+        cls.driver.quit()
+        phantom_js_clean_up()
+    except Exception as err:
+        print(err)
 
-    Kills all phantomjs instances, disregard of their origin.
+def chrome_clean_up():
+    """Clean up chrome or chromedriver.
+
+    Kills all chrome or chromedriver instances, disregard of their origin.
     """
     processes = subprocess.Popen(['ps', '-A'], stdout=subprocess.PIPE)
     out, err = processes.communicate()
@@ -54,9 +62,10 @@ class config_browser():
         chrome_options.add_argument('--headless')
         chrome_options.add_argument('--no-sandbox')
         chrome_options.add_argument("--window-size=1920,1080")
-        #driver = webdriver.Chrome(executable_path='/Users/user/Desktop/chromedriver', chrome_options=chrome_options)
-        driver = webdriver.Chrome(executable_path='/var/lib/jenkins/.wdm/chromedriver/2.34/chromedriver', chrome_options=chrome_options)    #### <----- Path to chomedriver on server
+        driver = webdriver.Chrome(executable_path='/Users/user/Desktop/chromedriver', chrome_options=chrome_options)
+        #driver = webdriver.Chrome(executable_path='/var/lib/jenkins/.wdm/chromedriver/2.34/chromedriver', chrome_options=chrome_options)    #### <----- Path to chomedriver on server
         browser.set_driver(driver)
+        driver = browser.driver()
 
 
     def phantomJS(self):
