@@ -117,7 +117,6 @@ class Test_Create_order_steps:
     @allure.story('Создание заказа - зарегестрированый пользователь')
     def test_order_wmp_with_admin(self):
         browser.open_url("https://www.writemypapers.org/")
-        #browser.driver().maximize_window()
         wmp.click_sign_in()
         order_admin.set_mail_and_pass(mail, pwd)
         order_admin.click_create_order_button_admin()
@@ -167,7 +166,6 @@ class Test_Create_order_steps:
     @allure.story('Создание заказа - зарегестрированый пользователь')
     def test_order_pw2(self):
         browser.open_url("https://www.paperwritings.com/")
-        #browser.driver().maximize_window()
         pw.click_sign_in()
         order_admin.set_mail_and_pass(mail, pwd)
         order_admin.click_create_order_button_admin()
@@ -193,7 +191,6 @@ class Test_Create_order_steps:
     @allure.story('Создание заказа - зарегестрированый пользователь')
     def test_order_mae2(self):
         browser.open_url("https://myadmissionsessay.com/")
-        browser.driver().maximize_window()
         mae.click_sign_in()
         order_admin.set_mail_and_pass(mail, pwd)
         # modals.modal_admin_auth_close()
@@ -223,7 +220,6 @@ class Test_Create_order_steps:
     @allure.story('Создание заказа - зарегестрированый пользователь')
     def test_order_ep2(self):
         browser.open_url("https://essaypedia.com/")
-        browser.driver().maximize_window()
         ep.click_sign_in()
         order_admin.set_mail_and_pass(mail, pwd)
         order_admin.click_create_order_button_admin()
@@ -248,7 +244,6 @@ class Test_Create_order_steps:
     @allure.story('Создание заказа - зарегестрированый пользователь')
     def test_order_pdn2(self):
         browser.open_url("https://admin.paperduenow.com")
-        browser.driver().maximize_window()
         all_site.close_modal_start_window()
         #pdn.click_sign_in()                   while A/b test go to admin.paperduenow.com page
         order_admin.set_mail_and_pass(mail, pwd)
@@ -274,7 +269,6 @@ class Test_Create_order_steps:
     @allure.story('Создание заказа - зарегестрированый пользователь')
     def test_order_1ws2(self):
         browser.open_url("https://1ws.com/")
-        browser.driver().maximize_window()
         ws.click_sign_in()
         order_admin.set_mail_and_pass(mail, pwd)
         order_admin.click_create_order_button_admin()
@@ -299,7 +293,6 @@ class Test_Create_order_steps:
     @allure.story('Создание заказа - зарегестрированый пользователь')
     def test_order_ee(self):
         browser.open_url("https://expert-editing.org/")
-        browser.driver().maximize_window()
         ee.click_sign_in()
         order_admin.set_mail_and_pass(mail, pwd)
         order_admin.click_create_order_button_admin()
@@ -324,7 +317,6 @@ class Test_Create_order_steps:
     @allure.story('Создание заказа - зарегестрированый пользователь')
     def test_order_fh2(self):
         browser.open_url("http://www.freelancehouse.co.uk/")
-        browser.driver().maximize_window()
         fh.click_sign_in()
         order_admin.set_mail_and_pass(mail, pwd)
         order_admin.click_create_order_button_admin()
@@ -349,7 +341,6 @@ class Test_Create_order_steps:
     @allure.story('Создание заказа - зарегестрированый пользователь')
     def test_order_lme2(self):
         browser.open_url("https://last-minute-essay.com/")
-        browser.driver().maximize_window()
         lme.click_sign_in()
         order_admin.set_mail_and_pass(mail, pwd)
         order_admin.click_create_order_button_admin()
@@ -374,7 +365,6 @@ class Test_Create_order_steps:
     @allure.story('Создание заказа - зарегестрированый пользователь')
     def test_order_ue2(self):
         browser.open_url("http://unitedessays.com/")
-        browser.driver().maximize_window()
         ue.click_sign_in()
         ue.set_mail_and_pass(mail, pwd)
         order_admin.click_create_order_button_admin()
@@ -399,7 +389,6 @@ class Test_Create_order_steps:
     @allure.story('Создание заказа - зарегестрированый пользователь')
     def test_order_DE2(self):
         browser.open_url("https://darwinessay.net/")
-        browser.driver().maximize_window()
         de.click_sign_in()
         order_admin.set_mail_and_pass(mail, pwd)
         order_admin.click_create_order_button_admin()
@@ -424,7 +413,6 @@ class Test_Create_order_steps:
     @allure.story('Создание заказа - зарегестрированый пользователь')
     def test_order_ea2(self):
         browser.open_url("https://essays.agency/")
-        browser.driver().maximize_window()
         main_page_ea.login()
         order_admin.click_create_order_button_admin()
         order_admin.choice_type_of_paper_essays()
@@ -448,7 +436,6 @@ class Test_Create_order_steps:
     @allure.story('Создание заказа - зарегестрированый пользователь')
     def test_order_et2(self):
         browser.open_url("https://www.essaytigers.com")
-        browser.driver().maximize_window()
         main_page_et.click_sign_in()
         order_admin.set_mail_and_pass(mail, pwd)
         order_admin.click_create_order_button_admin()
@@ -473,7 +460,6 @@ class Test_Create_order_steps:
     @allure.story('Создание заказа - зарегестрированый пользователь')
     def test_order_pm2(self):
         browser.open_url("https://papersmaster.com/")
-        browser.driver().maximize_window()
         main_page_pm.click_sign_in()
         order_admin.set_mail_and_pass(mail, pwd)
         #modals.modal_admin_auth_close()
@@ -494,7 +480,6 @@ class Test_Create_order_steps:
     @allure.story('Создание заказа - зарегестрированый пользователь')
     def test_order_est(self):
         browser.open_url("https://essaystone.com/")
-        browser.driver().maximize_window()
         main_page_est.click_sign_in()
         order_admin.set_mail_and_pass(mail, pwd)
         modals.modal_admin_auth_close()
@@ -516,7 +501,6 @@ class Test_Create_order_steps:
     @allure.story('Создание заказа - зарегестрированый пользователь')
     def test_order_dw2(self):
         browser.open_url("https://www.dissertationwritings.com/")
-        browser.driver().maximize_window()
         main_page_dw.click_sign_in()
         order_admin.set_mail_and_pass(mail, pwd)
         order_admin.click_create_order_button_admin()
@@ -540,8 +524,30 @@ class Test_Create_order_steps:
     @allure.story('Создание заказа - новый пользователь')
     def test_order_ap(self):
         browser.open_url("https://www.affordable-papers.net/")
-        browser.driver().maximize_window()
         ap.click_sign_in()
+        order_admin.set_mail_and_pass(mail, pwd)
+        order_admin.click_create_order_button_admin()
+        order_admin.choice_type_of_paper_essays()
+        order_admin.choice_subject_random()
+        order_admin.set_topic(topic)
+        order_admin.set_paper_details_LI()
+        order_admin.set_number_of_slides()
+        order_admin.choice_paper_format_random_step_inquiry()
+        order_admin.set_number_of_sources()
+        order_admin.choice_additional_materials(additional_materials_list)
+        order_admin.choice_Plagiarism_report()
+        order_admin.choice_Abstract_page()
+        order_admin.choice_VIP_customer_sevice()
+        order_admin.choice_payment_system()
+        price = order_steps.submit_proceed_to_secure_payment()
+        modals.modal_upgrade_order()
+        order_steps.checking_price(price)
+
+    @allure.feature('Создание заказа через админку клиента CW')
+    @allure.story('Создание заказа - новый пользователь')
+    def test_order_ap(self):
+        browser.open_url("https://college-writers.com/")
+        cw.click_sign_in()
         order_admin.set_mail_and_pass(mail, pwd)
         order_admin.click_create_order_button_admin()
         order_admin.choice_type_of_paper_essays()
