@@ -28,7 +28,7 @@ def modal_admin_referral_close():
 
 @allure.step("Закрытие модального окна реферал в админке клиента")
 def modal_upgrade_order():
-    time.sleep(2)
+    #time.sleep(2)
     if s('#last-step-order-form-modal > div > div > div.text_help.text2_modal > div.modal-footer > a').is_displayed():
         s('#last-step-order-form-modal > div > div > div.text_help.text2_modal > div.modal-footer > a').click()
     else:

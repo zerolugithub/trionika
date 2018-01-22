@@ -189,7 +189,7 @@ class Test_Create_order_steps:
 
     @allure.feature('Создание заказа через админку клиента MAE')
     @allure.story('Создание заказа - зарегестрированый пользователь')
-    def test_order_mae2(self):
+    def test_order_mae(self):
         browser.open_url("https://myadmissionsessay.com/")
         mae.click_sign_in()
         order_admin.set_mail_and_pass(mail, pwd)
@@ -212,7 +212,7 @@ class Test_Create_order_steps:
         order_admin.choice_option_preferred_writer(preferred_writer_option_list, Preferred_writer_ID)
         order_admin.choice_payment_system()
         price = order_steps.submit_proceed_to_secure_payment()
-        #modals.modal_upgrade_order()
+        modals.modal_upgrade_order()
         order_steps.checking_price(price)
 
 
@@ -504,7 +504,7 @@ class Test_Create_order_steps:
         main_page_dw.click_sign_in()
         order_admin.set_mail_and_pass(mail, pwd)
         order_admin.click_create_order_button_admin()
-        order_admin.choice_type_of_paper_essays()
+        #order_admin.choice_type_of_paper_essays()
         order_admin.choice_subject_random()
         order_admin.set_topic(topic)
         order_admin.set_paper_details_LI()
@@ -527,7 +527,7 @@ class Test_Create_order_steps:
         ap.click_sign_in()
         order_admin.set_mail_and_pass(mail, pwd)
         order_admin.click_create_order_button_admin()
-        order_admin.choice_type_of_paper_essays()
+        #order_admin.choice_type_of_paper_essays()
         order_admin.choice_subject_random()
         order_admin.set_topic(topic)
         order_admin.set_paper_details_LI()
