@@ -33,6 +33,8 @@ def choice_subject_random():
     time.sleep(2)
     s(by.xpath('//ul[@id="ui-id-1"]/li[' + n + ']')).click()
 
+
+
 @allure.step('Нажимаем на главной странице кнопку Inquiry')
 def click_inquiry_button():
     print 'Create inquiry on WMP'
