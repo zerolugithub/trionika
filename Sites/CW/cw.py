@@ -25,4 +25,4 @@ def choice_subject_random():
 
 @allure.step("Нажимаем на кнопку Sign In")
 def click_sign_in():
-    s(by.xpath('body > header > div > div > div.col-md-6.right-move-right > div > div.col-md-5.col-sm-12.col-xs-12 > div > span > a:nth-child(2) > strong')).click()
+    s('.chat-hrader > a:nth-child(2) > strong:nth-child(2)').click()
