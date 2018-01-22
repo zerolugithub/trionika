@@ -44,6 +44,7 @@ def click_create_order_button_admin_text():
 
 @allure.step('Случайный выбор Academic Level')
 def choice_academic_level():
+    time.sleep(2)
     n = random.randint(0, 2)
     academic_level_list = ['undergraduate','master','professional']
     academic_level = academic_level_list[n]
