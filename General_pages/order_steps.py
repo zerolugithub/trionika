@@ -482,6 +482,9 @@ def checking_price(price):
         elif title == 'darwinessay.net':
             price = s('#items_table > tbody > tr.even > td.price').text
             print 'The payment system is gate2shop' + price
+        elif 'gate2shop' in url:
+            price = s('#items_table > tbody > tr.even > td.price').text
+            print 'The payment system is gate2shop' + price
         else:
             print 'The order did not go to the payment page'
             s('.Error - The order did not go to the payment page').click()
