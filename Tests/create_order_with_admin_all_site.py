@@ -183,7 +183,7 @@ class Test_Create_order_steps:
         order_admin.choice_option_preferred_writer(preferred_writer_option_list, Preferred_writer_ID)
         order_admin.choice_payment_system()
         price = order_steps.submit_proceed_to_secure_payment()
-        #modals.modal_upgrade_order()
+        modals.modal_upgrade_order()
         order_steps.checking_price(price)
 
 
@@ -470,7 +470,7 @@ class Test_Create_order_steps:
         order_admin.set_paper_details_LI()
         order_pm.choice_paper_format_random_step_inquiry()
         order_pm.choice_additional_materials(additional_materials_list)
-        order_pm.choice_deadline()
+        #order_pm.choice_deadline()
         order_pm.choice_payment_system()
         price = order_pm.click_proceed_to_secure_payment_inquiry()
         #modals.modal_upgrade_order()
