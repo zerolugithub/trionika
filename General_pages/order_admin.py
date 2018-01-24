@@ -59,14 +59,14 @@ def choice_academic_level():
 def choice_type_of_paper_essays():
     a = str(random.randint(1, 3))
     if a == '1':
-        print 'Сategory  - Essays'
+        print 'Category  - Essays'
         count = str(random.randint(1, 24))
     elif a == '2':
-        print 'Сategory  - Dissertation'
+        print 'Category  - Dissertation'
         print  'Academic level change to Professional'
         count = str(random.randint(1, 9))
     elif a == '3':
-        print 'Сategory  - Homework Help'
+        print 'Category  - Homework Help'
         count = str(random.randint(1, 8))
     else:
         count = str(random.randint(1, 6))
