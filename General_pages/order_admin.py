@@ -201,6 +201,10 @@ def choice_paper_format_random_step_inquiry():
 @allure.step('Случайный выбор платежной системы')
 def choice_payment_system():   # Choice Credit card or PayPal
     n = str(random.randint(1, 2))
+    if n==1:
+        print "Payment system is Credit card"
+    if n==2:
+        print "Payment system is Credit card"
     s(by.xpath('.//*[@id="_choose_pay_system"]/div[2]/div/div[' + n + ']/label')).click()
     time.sleep(3)
 
