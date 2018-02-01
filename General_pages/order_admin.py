@@ -133,6 +133,7 @@ def set_paper_details_LI():
     sentences_count, words_count, paragraph = generate_paragraph()
     text_paper_details=str(generate_paragraph())
     text = str(generate_paragraph())
+    text = text[2]
     s('[name="paper_details"]').set_value(text)
     print 'Paper details - ' + text
 

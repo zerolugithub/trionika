@@ -4,6 +4,7 @@
 import os
 
 import allure
+import pytest
 from selene.api import *
 from selene.browsers import BrowserName
 
@@ -56,23 +57,27 @@ class Test_Create_order_steps:
         print '\n ****************** END TEST KEYS ***************** \n'
         browser.close()
 
-    # _________________________________________________DE________________________________
+    @allure.testcase('https://www.google.com.ua/')
+    @allure.severity(allure.severity_level.CRITICAL)
     @allure.feature('Case 1 ')
     @allure.story('First test')
     def test_1(self):
         print 'First test'
 
+    @allure.severity(allure.severity_level.MINOR)
     @allure.feature('Case 1 ')
     @allure.story('Title PH')
     def test_2(self):
         browser.open_url("https://www.paperhelp.org/")
         print browser.driver().title
 
+    @allure.severity(allure.severity_level.CRITICAL)
     @allure.feature('Case 2 ')
     @allure.story('Second test')
     def test_3(self):
         print 'Second test'
 
+    @allure.severity(allure.severity_level.TRIVIAL)
     @allure.feature('Case 2 ')
     @allure.story('Title PH 2')
     def test_4(self):
